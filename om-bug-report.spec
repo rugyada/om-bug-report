@@ -35,6 +35,8 @@ ln -sf %{_bindir}/%{name} %{buildroot}%{_bindir}/%{name}.sh
 # (tpg) keep comapt with old name
 ln -sf %{_bindir}/%{name} %{buildroot}%{_bindir}/omv-bug-report.sh
 ln -sf %{_bindir}/%{name} %{buildroot}%{_bindir}/omv-bug-report
+ln -sf %{_bindir}/%{name} %{buildroot}%{_bindir}/omdv-bug-report.sh
+ln -sf %{_bindir}/%{name} %{buildroot}%{_bindir}/omdv-bug-report
 
 %files
 %{_bindir}/*
