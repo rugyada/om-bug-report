@@ -1,6 +1,6 @@
 Summary:	%{distribution} bug helper
 Name:		om-bug-report
-Version:	0.0.4.1
+Version:	0.1
 Release:	1
 License:	GPLv3+
 Group:		System/Base
@@ -29,14 +29,12 @@ A simple tool to gather system information to ease bug resolve.
 
 %install
 mkdir -p %{buildroot}%{_bindir}
-install -m755 %{SOURCE0} %{buildroot}%{_bindir}/%{name}
+install -c -m755 %{SOURCE0} %{buildroot}%{_bindir}/%{name}
 ln -sf %{_bindir}/%{name} %{buildroot}%{_bindir}/%{name}.sh
 
 # (tpg) keep comapt with old name
 ln -sf %{_bindir}/%{name} %{buildroot}%{_bindir}/omv-bug-report.sh
 ln -sf %{_bindir}/%{name} %{buildroot}%{_bindir}/omv-bug-report
-ln -sf %{_bindir}/%{name} %{buildroot}%{_bindir}/omdv-bug-report.sh
-ln -sf %{_bindir}/%{name} %{buildroot}%{_bindir}/omdv-bug-report
 
 %files
 %{_bindir}/*
